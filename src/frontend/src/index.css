@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-VariableFont_wght.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DESIGLOW — warm cream & amber palette */
+    --background: 0.97 0.01 85;
+    --foreground: 0.2 0.02 40;
+
+    --card: 0.98 0.008 80;
+    --card-foreground: 0.2 0.02 40;
+
+    --popover: 0.98 0.008 80;
+    --popover-foreground: 0.2 0.02 40;
+
+    /* Warm amber/gold primary */
+    --primary: 0.65 0.12 65;
+    --primary-foreground: 0.98 0.01 85;
+
+    /* Terracotta secondary */
+    --secondary: 0.75 0.08 50;
+    --secondary-foreground: 0.98 0.01 85;
+
+    --muted: 0.93 0.02 75;
+    --muted-foreground: 0.5 0.04 60;
+
+    --accent: 0.72 0.1 55;
+    --accent-foreground: 0.98 0.01 85;
+
+    --destructive: 0.6 0.18 25;
+    --destructive-foreground: 0.98 0.01 85;
+
+    --border: 0.88 0.04 70;
+    --input: 0.88 0.04 70;
+    --ring: 0.65 0.12 65;
+
+    --radius: 0.5rem;
+
+    --chart-1: 0.65 0.12 65;
+    --chart-2: 0.72 0.1 55;
+    --chart-3: 0.58 0.14 40;
+    --chart-4: 0.8 0.07 80;
+    --chart-5: 0.45 0.1 30;
+
+    --sidebar: 0.97 0.01 85;
+    --sidebar-foreground: 0.2 0.02 40;
+    --sidebar-primary: 0.65 0.12 65;
+    --sidebar-primary-foreground: 0.98 0.01 85;
+    --sidebar-accent: 0.93 0.02 75;
+    --sidebar-accent-foreground: 0.2 0.02 40;
+    --sidebar-border: 0.88 0.04 70;
+    --sidebar-ring: 0.65 0.12 65;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .fade-in-up {
+    animation: fadeInUp 0.7s ease both;
+  }
+  .fade-in {
+    animation: fadeIn 0.8s ease both;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
